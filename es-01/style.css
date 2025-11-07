@@ -1,0 +1,40 @@
+/*Tutti i paragrafi colorati di blu*/
+p {
+    color: blue
+}
+
+/*Tutti gli elementi che hanno la classe "testo-rosso" */
+.testo-rosso {
+    color: red;
+}
+
+/*L'elemento con id = "sezione-3" */
+#sezione-3 {
+    color: purple;
+}
+
+/*Tutti gli elementi a che hanno classe testo-rosso*/
+a.testo-rosso {
+    color: rgb(80, 12, 190);
+}
+
+/*Tutti gli elementi a che hanno classe testo-rosso e classe testo-marrone (deve averle entrambe)*/
+a.testo-rosso.testo-marrone {
+    color: rgb(80, 12, 190);
+}
+
+/*Tutti gli elementi di tipo a racchiusi all'interno di un elemento con classe="testo-principale" 
+(se metto p.testo-principale a significherebbe tutti gli ele. all'interno di un paragrafo con classe testo-principale)*/
+.testo-principale a {
+    color: yellow;
+}
+
+/*tutti gli elementi a figli del paragrafo che ha classe testo-principale*/
+p.testo-principale > a {
+    color: yellow;
+}
+
+/*Tutti i discendenti diretti del paragrafo, quindi tutti gli elementi dentro un qualsiasi paragrafo*/
+p > * {
+    color: aquamarine;
+}
