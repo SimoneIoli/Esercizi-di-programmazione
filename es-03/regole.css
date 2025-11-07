@@ -47,9 +47,6 @@ ul.classe-2 > :first-child {
 ul.classe-2 > :nth-child(2n){
     color: green;
 }
-ul.classe-2 > :nth-child(3n){
-    color: red;
-}
-ul.classe-2 > :nth-child(5){
+ul.classe-2 > :nth-child(3) ,ul.classe-2 > :nth-child(5){
     color: red;
 }
