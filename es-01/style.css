@@ -38,3 +38,8 @@ p.testo-principale > a {
 p > * {
     color: aquamarine;
 }
+
+/*Seleziona l'elemento di tipo A su cui l'utente ha il mouse */
+:hover {
+    color: blueviolet;
+}

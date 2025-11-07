@@ -1,0 +1,55 @@
+/*COLORA DI ROSSO TUTTI GLI ELEMENTI DI TIPO SPAN*/
+span {
+    color: red;
+}
+
+/*COLORA DI BLU TUTTI GLI ElEMENTI DI TIPO SPAN CONTENUTI DENTRO UN PARAGRAFO*/
+p span {
+    color: blue;
+}
+
+/*COLORA DI VERDE LO SPAN CON CLASS CLASSE-1, DENTRO AL PARAGRAFO DI CLASS CLASSE 1, DENTRO AL PRIMO DIV*/
+div#sezione-1 > p.classe-1 > span.classe-1 {
+    color: green;
+}
+
+/*COLORA DI VIOLA LO SPAF DENTRO A DIV 2 CON CLASS CLASSE-1*/
+div#sezione-1 > div.sezione-2 > p.classe-1 {
+    color: purple;
+}
+
+/* COLORA DI GIALLO IL LINK AL PASSAGGIO DELL'UTENTE*/
+a:hover {
+    color: yellow;
+}
+
+/*CAMBIARE IL COLORE DEL PARAGRAFO CON CLASSE-2 DENTRO AL DIV CON ID (PARENTELA DIRETTA)*/
+div#sezione-1 > p.classe-2:hover {
+    color: blue;
+}
+
+/*Prendere il primo paragrafo dentro div di sezione 2
+div.sezione-2 > p:not(.classe-1) {
+    color: orange;    
+}*/
+/*Alternativa: PREFERIAMO QUESTO AL PRIMO, POICHE' PIU' VELOCE DA ELABORARE*/
+.sezione-2 > :nth-child(2) { /*esiste anche il last-child*/
+    color: orange;
+}
+/*si può prendere anche l'ennesimo figlio, così: nth-child(x) dove x è un numero intero positivo che indica il numero del figlio,
+se io metto 2n al posto della x prendo tutti ad intervallo di due, 2,4,6,8. ma si può usare qualsiasi equzione matematica*/
+
+
+/*colorare gli elementi di una lista con il colore scritto dentro al loro nome*/
+ul.classe-2 > :first-child {
+    color: yellow;
+}
+ul.classe-2 > :nth-child(2n){
+    color: green;
+}
+ul.classe-2 > :nth-child(3n){
+    color: red;
+}
+ul.classe-2 > :nth-child(5){
+    color: red;
+}
