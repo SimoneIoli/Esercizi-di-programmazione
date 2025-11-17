@@ -43,3 +43,101 @@ p > * {
 :hover {
     color: blueviolet;
 }
+button:hover {
+    background-color: lightgray;
+}
+
+/*
+COLORI CON IL FORMATO ESADECIMALE
+Bianco: #FFFFFF
+Nero: #000000
+Rosso: #FF0000
+Verde: #00FF00
+Blu: #0000FF
+Giallo: #FFFF00
+Ciano: #00FFFF
+Magenta: #FF00FF
+
+Per il testo usare la famiglia di font es "Arial", "Helvetica", sans-serif
+font-family: "Arial", "Helvetica", sans-serif; oppure
+font-family: 'Times New Roman', Times, serif;
+
+Grandezza di ogni singolo carattere in pixel (px)
+font-size: 16px;
+oltre ai pixel si possono usare i 'em' o 'rem' (applicacano un moltiplicatore alla grandezza) 
+es.
+body {
+    font-size: 16px;  //grandezza base
+}
+p {
+    font-size: 1.5em; //1.5 volte la grandezza base, quindi 24px
+}
+p span {
+    font-size: 1.5em; //2 volte la grandezza precedente, quindi 36px
+}
+a {
+    font-size: 1.5rem; //1.5 volte la grandezza base, quindi 24px
+}
+Per il peso del carattere si usa:    
+fotn-weight: bold; //grassetto = font-weight: 700
+font-weight: normal; //normale = font-weight: 400
+
+Poi c'è anche il corsivo:
+font-style: italic; //corsivo
+per toglierlo: font-style: normal;
+
+Per sottilineare il testo:
+text-decoration: underline;
+text-decoration: line-through; //barrato  (comodo per e-coommerce)
+text-decoration: none; //nessuna decorazione
+
+Per allineare il testo:
+text-align: center; //centrato
+text-align: left; //allineato a sinistra
+text-align: right; //allineato a destra
+text-align: justify; //giustificato
+
+Per trasformare il testo in tutto maiuscolo o minuscolo:
+text-transform: uppercase; //tutto maiuscolo
+text-transform: lowercase; //tutto minuscolo
+text-transform: capitalize; //prima lettera maiuscola
+
+Regole per le liste sia ordinate che non ordinate:
+list-style-type: disc; //pallini neri
+list-style-type: circle; //pallini bianchi
+list-style-type: square; //quadrati neri
+list-style-type: none; //nessun simbolo
+
+Regole per i bottoni:
+*/
+button {
+    background-color: lightblue; /*colore di sfondo*/
+    border: 2px solid blue; /*/bordo di 2px di colore blu */
+    border-radius: 5px; /*/angoli arrotondati con raggio di 5px */
+    padding: 10px 20px; /*/spaziatura interna (10px sopra e sotto, 20px a destra e sinistra) */
+    cursor: pointer; /*/cambia il cursore quando si passa sopra il bottone */
+}
+body {
+    background-color: rgb(255, 237, 214);
+   
+}
+#spazi {
+    background-color: pink;
+    margin: 50px;
+    padding: 20px;
+    border: 1px #000 solid;  
+}
+/* REGOLE DEI MARGINI
+margin: 10px; //spazio esterno di 10px su tutti i lati
+margin-top: 10px; //spazio esterno di 10px sopra
+margin-right: 10px; //spazio esterno di 10px a destra  
+margin-bottom: 10px; //spazio esterno di 10px sotto
+margin-left: 10px; //spazio esterno di 10px a sinistra
+
+IL PADDING E' LO SPAZIO INTERNO
+padding: 10px; //spazio interno di 10px su tutti i lati
+padding-top: 10px; //spazio interno di 10px sopra
+padding-right: 10px; //spazio interno di 10px a destra
+padding-bottom: 10px; //spazio interno di 10px sotto
+padding-left: 10px; //spazio interno di 10px a sinistra
+*/
