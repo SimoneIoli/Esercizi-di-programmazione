@@ -10,3 +10,28 @@ background-color: red;
 div > *:nth-child(4) {
 background-color: brown;
 }
+div.inline > *{ display: inline; /*Rimane in linea e usa le proprietà delle linee*/}
+div.block > *{ display: block; /*Rimane in blocco e usa le proprietà dei blocchi*/ }
+div.inline-block > *{ display: inline-block; /*Rimani in linea ma usa le proprietà dei blocchi*/ width: 125px; }
+
+.none { display: none; /*L'elemento viene nascosto, ma nel codice rimane */ }
+.hidden { visibility: hidden; /*L'elemento viene nascosto, ma lo spazio che occupava rimane*/ }
+.opacity-0 { opacity: 0.5; /*L'elemento viene reso trasparente, e lo spazio che occupava rimane (va da 0 a 1 con i decimali in mezzo*/ }
+
+.flex { display: flex; /*L'elemento diventa un contenitore flessibile*/ flex-wrap: wrap; background-color: lightsalmon; }
+.flex-grow1 { flex-grow: 1;}
+.flex-grow2 { flex-grow: 2;}
+.flex-grow3 { flex-grow: 3;}
+.justify-start { justify-content: start; /*Allinea gli elementi figli al centro orizzontalmente*/ }
+.justify-center { justify-content: center; /*Allinea gli elementi figli al centro orizzontalmente*/}
+.justify-end { justify-content: end; /*Allinea gli elementi figli al centro orizzontalmente*/ }
+.justify-evenly { justify-content: space-evenly; /*Distribuisce lo spazio in modo uniforme tra gli elementi figli orizzontalmente*/ }
+.justify-around { justify-content: space-around; /*Distribuisce lo spazio intorno agli elementi figli orizzontalmente*/ }
+.justify-between { justify-content: space-between; /*Distribuisce lo spazio tra gli elementi figli orizzontalmente*/ }
+
+.direction-reverse { flex-direction: row-reverse; /*Inverte l'ordine degli elementi figli orizzontalmente*/ }
+
+.align-start { align-items: flex-start; /*Allinea gli elementi figli al centro verticalmente*/ }
+.align-center { align-items: center; /*Allinea gli elementi figli al centro verticalmente*/ }
+.align-end { align-items: flex-end; /*Allinea gli elementi figli al centro verticalmente*/ }
+.align-baseline { align-items: baseline; /*Allinea gli elementi figli alla linea di base del testo*/ }

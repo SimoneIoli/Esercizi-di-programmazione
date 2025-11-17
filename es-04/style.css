@@ -1,0 +1,25 @@
+div.flex {
+    display: flex;
+    background-color: lightslategrey;
+    text-align: center;
+}
+div > *:nth-child(1) {
+    color: red;
+    background-color: green;
+}
+div > *:nth-child(2) {
+    color:orange;
+    background-color: red;
+}
+div > *:nth-child(3) {
+    color:green;
+    background-color: orange;
+}
+.div1 {justify-content: space-between;}
+
+.grandezza1 { flex-grow: 1;  }
+.grandezza2 { flex-grow: 1;  order: 1;}
+.grandezza3 { flex-grow: 2;  }
+.centro { flex-grow: 2; background-color: red; text-align: center;}
+.sinistra { flex-grow: 1; background-color: green; text-align: center;}
+.destra { flex-grow: 1; background-color: orange; text-align: center;}
