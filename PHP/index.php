@@ -1,7 +1,7 @@
 <?php 
-//Commento in linea
-/*Coomento
-su più linee*/ 
+    //Commento in linea
+    /*Coomento
+    su più linee*/ 
     /*Stringhe*/
     echo "<h1 class='classe'>Hello World</h1>"; //le virgolette dentro per funzionare devono essere diverse da quelle all'esterno
     echo '<h2 class="classe" attr= \'qui sono dentro nella stringa \'>Tipi di dato:</h2>'; //possono essere usate con \ per essere usate anche dentro
@@ -49,5 +49,13 @@ su più linee*/
     if ($array_3["eta"] == 18) { } //Questa condizione è vera anche se "eta" fosse la stringa "18"
     if ($array_3["eta"] === "18") { } //Questa condizione è falsa 
     // intero senza virgolette, stringa con virgolette
+
+    /**Operatori Logici:
+     * AND -> and o &&  -- Se la prima condizione è falsa non guardo nemmeno la seconda 
+     * OR -> or oppure ||  -- Se la prima condizione è vera non guardo nemmeno la seconda
+     * NOT -> !
+     * XOR -> xor
+     * 
+     */
     
 ?>
