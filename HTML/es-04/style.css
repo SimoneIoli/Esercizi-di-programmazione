@@ -1,6 +1,6 @@
+/*Settaggi di base*/
 div.flex {
     display: flex;
-    background-color: lightslategrey;
     text-align: center;
 }
 div > *:nth-child(1) {
@@ -16,7 +16,8 @@ div > *:nth-child(3) {
     background-color: orange;
 }
 .div1 {justify-content: space-between;}
-
+.div1 > *{width: 100px;}
+.div4 > *{width: 100px; }
 .grandezza1 { flex-grow: 1;  }
 .grandezza2 { flex-grow: 1;  order: 1;}
 .grandezza3 { flex-grow: 2;  }
