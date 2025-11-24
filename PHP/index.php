@@ -85,13 +85,168 @@
         $a++;
     }
     if ($trovato) {
-        echo "<br/>Il numero: ".$numero ; echo "\nè stato trovato";
+        echo "<br/>Il numero: ".$numero ; echo "\nè stato trovato<br/>";
     } else {
-        echo "<br/>Il numero: ".$numero ; echo "\nnon è stato trovato";
+        echo "<br/>Il numero: ".$numero ; echo "\nnon è stato trovato<br/>";
     }
     /**Sintassi del ciclo do-while 
      * do {
      *  istruzione;
      * } while (condizione);
     */
+
+    $settimana = ["monday","tuesday","wendsday","thursday","friday","saturday","sunday"];
+    for ($i=0; $i < count($settimana); $i++) {
+        switch($settimana[$i]) {
+            case "monday" :
+                echo "Lunedì</br>";
+                break;
+            case "tuesday" :
+                echo "Martedì</br>";
+                break;
+            case "wendsday" :
+                echo "Mercoledì</br>";
+                break;
+            case "thursday" :
+                echo "Giovedì</br>";
+                break;
+            case "friday" :
+                echo "Venerdì</br>";
+                break;
+            case "saturday" :
+                echo "Sabato</br>";
+                break;
+            case "sunday" :
+                echo "Domenica</br>";
+                break;
+            default: 
+                echo "non valido</br>";
+        }
+    }
+
+/**Creazione di funzioni */
+
+/**
+ * Calcola la media dei voti
+ * 
+ * @param int[] $voti i voti dello studente
+ * 
+ * @return float la media aritmetica 
+ */
+function calcola_media($voti) {  //con le quadre vuote per renderlo opzionale, altrimenti è obbligatorio
+    $somma=0;
+    for ($i=0; $i<count($voti); $i++){
+        $somma += $voti[$i];
+    }
+    $media = $somma/count($voti);
+    return $media;
+}
+$studenti= [
+    array(
+        "nome" => "Mario",
+        "eta" => 19,
+        "voti" => [3,7,6,10]
+    ),
+    array(
+        "nome" => "Lucia",
+        "eta" => 14,
+        "voti" => [6,7,8,8]
+    ),
+    array(
+        "nome" => "Rosa",
+        "eta" => 21,
+        "voti" => [6,9,5,8]
+    ),
+    array(
+        "nome" => "Francesco",
+        "eta" => 24,
+        "voti" => [7,9,9,10]
+    ),
+    array(
+        "nome" => "Giuseppe",
+        "eta" => 16,
+        "voti" => [6,9,6,6]
+    ),
+    array(
+        "nome" => "Marta",
+        "eta" => 22,
+        "voti" => [6,3,6,5]
+    ),  
+];
+foreach ($studenti as $studente) {
+    $media = calcola_media($studente["voti"]);
+    echo $studente["nome"]. " ha una media di: ".$media. ": ";
+    if ($media >=6) {
+        echo "Promosso";
+    } else {
+        echo "Bocciato";
+    }
+    echo "<br/>";
+}
+
+
+//Formattatore di date
+//Sunday 3 August 2025
+function formatta_data($data) {
+    $parti= explode(" ", $data);
+    $giorno_della_settimana = traduci_giorno_settimana($parti[0]);
+    $giorno_del_mese = traduci-giorno_settimana($parti[1]);
+    $mese = traduci_mede($parti[2]);
+    $anno = traduci_anno($parti[3]);
+    return $giorno_della_settimana . " " . $giorno_del_mese . " " . $mese . " " . $anno;
+}
+
+echo formatta_data("Sunday 3 August 2025");
+
+function traduci_giorno_settimana ($giorno) {
+    switch(strlower($giorno)) {
+        case "monday" :
+            return "Lunedì";
+        case "tuesday" :
+            return "Martedì";
+        case "wendsday" :
+            return "Mercoledì";
+        case "thursday" :
+            return "Giovedì";
+        case "friday" :
+            return "Venerdì";
+         case "saturday" :
+            return "Sabato";
+        case "sunday" :
+            return "Domenica";
+        default: 
+            return "falso";
+    }
+}
+
+function traduci_mese ($mese) {
+    switch(strlower($mese)) {
+        case "january" :
+            return "Gennaio";
+        case "february" :
+            return "Febbraio";
+        case "March" :
+            return "Marzo";
+        case "April" :
+            return "Aprile";
+        case "May" :
+            return "Maggio";
+        case "June" :
+            return "Giugno";
+        case "July" :
+            return "Luglio";
+        case "August" :
+            return "Agosto";
+        case "September" :
+            return "Settembre";
+        case "October" :
+            return "Ottobre";
+        case "November" :
+            return "Novembre";
+        case "December" :
+            return "Dicembre";
+        default: 
+            return "falso";
+    }
+}
 ?>

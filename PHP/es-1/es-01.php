@@ -86,3 +86,32 @@
         }
         ?></strong> </span></p>
     </div>
+<?php
+    /**Caso con lo switch
+     * switch ($voto) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+            echo "Insufficiente";
+            break;
+        case 6:
+            echo "Sufficiente";
+            break;
+        case 7:
+        case 8:
+            echo "Buono";
+            break;
+        case 9:
+            echo "Ottimo";
+            break;
+        case 10:
+            echo "Eccellente";
+            break;
+        default:
+            echo "voto non valido";
+     */
+
+?>

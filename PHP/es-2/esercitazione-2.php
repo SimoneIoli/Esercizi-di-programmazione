@@ -88,3 +88,50 @@ foreach ($persone as $persona) {
 }
 $media= $somma / $num;
 echo "<br/>La media è: ".$media;
+
+/**
+ * ES-4
+ * Data l'eta di una persona, ritorna se può votare guidare il 125cc */
+/**
+ * vedere se è può guidare il 125cc
+ * @param int $eta l'età della persona
+ * @param bool vero se può, falso il contrario
+ */
+function può_guidare_125($eta) {
+    if ($eta >= 16) 
+        return true;
+
+    return false;
+}
+
+/**
+ * ES-5
+ * Dato un numero, ritorna se è divisibile per 3
+ */
+/**
+ * Numero divisibile per 3
+ * @param int $numero il numero in ingresso
+ * @param bool vero se è divisibile, altrimenti falso
+ */
+function divisione_3($numero) {
+    if (($numero % 3) == 0) 
+        return true;
+
+    return false; 
+}
+
+/**
+ * ES-6
+ * Dato un numero, ritornalo in formato EURO (€ 10.00)
+ */
+/**
+ * Trasformare in formato euro
+ * @param int $valore Numero da trasformare
+ * @param float ritorno del valore trasformato (€ 10.00)
+ */
+function formato_euro($valore) {
+    return "€ ".number_format($valore, 2, ".", "'");
+}
+echo "<br/>";
+$costo = 123000.5;
+echo formato_euro($costo);
