@@ -57,5 +57,41 @@
      * XOR -> xor
      * 
      */
-    
+    /**COSTRUTTI FOR   WHILE   DO-WHILE  */
+    $voti =  [7, 8, 7.5, 9, 10, 8];
+
+    $somma = 0;
+    $num_voti = 0;
+    for ($i=0; $i<count($voti); $i++) {
+        if ($voti[$i] > 0 && $voti[$i] <= 10) {
+            $somma += $voti[$i];
+            $num_voti++;
+        }
+        
+    }
+    echo "La somma dei voti è: ". $somma;
+    echo "<br/> Il numero dei voti validi è: " . $num_voti;
+    $media= $somma / $num_voti;
+    echo "<br/>La media dei voti è: ". $media;
+
+    $numero =45;
+    $valori=[10, 25, 45, 32, 78, 17, 15];
+    $a=0;
+    $trovato=false;
+    while ($a<count($valori)) {
+        if ($valori[$a] == $numero) {
+            $trovato=true;
+        }
+        $a++;
+    }
+    if ($trovato) {
+        echo "<br/>Il numero: ".$numero ; echo "\nè stato trovato";
+    } else {
+        echo "<br/>Il numero: ".$numero ; echo "\nnon è stato trovato";
+    }
+    /**Sintassi del ciclo do-while 
+     * do {
+     *  istruzione;
+     * } while (condizione);
+    */
 ?>
