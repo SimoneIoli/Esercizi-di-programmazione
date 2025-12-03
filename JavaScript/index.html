@@ -24,6 +24,32 @@
         </ul>
     </div>
     <p class="figlio">figlio esterno</p>
+    <button id="click-me-button">cliccami</button> <br/><br/>
+    <form action="#" method="post"> <!-- Action è il link della pagina a cui vengono inviati i dati, method indica la tipologia di modulo che stiamo facendo (post per 
+        invio dati al server, mentre get per ricevere dati dal server, non usare get per password e email, usalo per infomrazioni pubbliche, tipo filtri di ricerca)-->
+        <input type="text" placeholder="Segnaposto" value="Valore" required disabled /> <br/> <!--value è come un valore predefinito chesi può cambiare, required indica che è obbligatorio -->
+        <input type="email" placeholder="aaa@bbb.it" /> <br/>
+        <input id="show-password" type="password" placeholder="Password" />
+        <button id="password"> Mostra la password</button>
+        <input type="tel" placeholder="333 456 7892" /><br/>
+        <input type="number" placeholder="num" /><br/>
+        <input type="date" placeholder="gg/mm/aaaa" /><br/>
+        <input type="time" placeholder="hh:mm" /><br/>
+        <input type="file"  /><br/>
+        <p>sei maggiorenne?</p>
+        <input type="radio" name="radio-1" value="val-1" id="radio-1-1"/>
+        <label for="radio-1-1"></label> Si <br/> <!-- -->
+        <input type="radio" name="radio-1" value="val-2" id="radio-1-2"/>
+        <label for="radio-1-2"></label> No <br/> <!-- --><br/>
+        <input type="checkbox" id="privacy" required> <label for="privacy"></label> Accetto il trattamento di dati<br/>
+        <select name="" id="">
+            <option value="val-1">valore1</option>
+            <option value="val-2">valore2</option>
+        </select> <br/>
+        <textarea name="" id=""></textarea><br/>
+        <button type="submit">invia</button><br/>
+        <button type="reset"> Reset</button>
+    </form>
     <script src="script.js" ></script>
 </body>
 </html>

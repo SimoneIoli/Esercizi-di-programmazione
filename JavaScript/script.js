@@ -1,3 +1,4 @@
+
 /** 
 //stampa in console
 console.log ("Ciao, mondo!");
@@ -8,6 +9,7 @@ console.log(window.confirm("Sei sicuro?"));
 //mostra un popoup che chiede un informazione
 window.prompt("Inserisci un numero");
 */
+/*
 //dichiarazione di variabili
 var stringa1="Ciao Mondo";  // variabile globale
 let stringa2="Ciao Mondo!"; //variabile locale
@@ -89,7 +91,7 @@ console.log(d == true); //falso!
 console.log(e == true); //falso!
 console.log(d == e); //vero (entrambi falsi -> true)
 console.log(d === e); //falso nullo != undefined
-
+*/
 /** controlli di flusso
 var numero= window.prompt("Inserisci un numero");
 if ((numero % 2) ==0) {
@@ -141,6 +143,7 @@ switch(mese){
         window.alert("mese non valido");
 }
 */
+/*
 //stampare a video un risultato
 console.log(document.getElementById("elemento-1"));
 console.log(document.getElementsByClassName("elementi"));
@@ -155,3 +158,45 @@ lista.innerHTML = '<li>1</li><li class="figlio">2</li>';
 console.log(lista.getElementsByClassName("figlio")); //1 figlio solo così
 lista.innerText = '<li>1</li><li class="figlio">2</li>';
 console.log(lista.getElementsByClassName("figlio")); //0 figli
+*/
+/*
+let array= [1,2,3,4,5];
+let oggetto= {
+    nome:"Luca",
+    cognome:"Rossi",
+    chiave: "chiave!"
+};
+//Ciclo for of
+for (valore of array) {
+    
+}
+//Ciclo for of
+for (chiave of oggetto) {
+
+}
+*/
+var clickMeButton= document.getElementById("click-me-button");
+clickMeButton.addEventListener('mouseenter', function(){
+    clickMeButton.style.top = Math.random() *100 + "%";
+    clickMeButton.style.left = Math.random() *100 + "%";
+} );
+
+var showPasswordBtn= document.getElementById("show-password");
+showPasswordBtn.addEventListener('click',function() {
+    let passwordInput = document.getElementById("password");
+    if (passwordInput.getAttribute('type') == 'password') {
+        passwordInput.setAttribute('type', 'text');
+        showPasswordBtn.innerText= "nascondi la password";
+    } else {
+        passwordInput.setAttribute('type','password');
+        showPasswordBtn.innerText="mostra password";
+    }
+});
+
+passwordInput.addEventListener('change', function() {
+    if (passwordInput.value.lenght < 3) {
+        passwordInput.style.color= "red";
+    } else {
+        passwordInput.style.color= "green";
+    }
+})
