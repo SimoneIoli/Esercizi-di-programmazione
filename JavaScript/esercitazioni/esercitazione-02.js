@@ -16,3 +16,35 @@ function esercizio02() {
     }
     document.getElementById("es2-risultato").innerText="il fattoriale è "+ fattoriale;
 }
+
+function esercizio03() {
+    let studente = {
+        nome: "",
+        cognome: "",
+        marticola: "",
+        voti : []
+    };
+    //input
+    for (chiave in studente) {
+        if (chiave!="voti") {
+            studente [chiave]= window.prompt("Inserire "+ chiave);
+        } else {
+            let stringaVoti = window.prompt("Inserire i voti separati da ',' ");
+            studente[chiave] = stringaVoti.split(",");
+        }
+    }
+    //media
+    let mediavoti=0;
+    for (voto of studente.voti) {
+        mediavoti+= parseInt(voto);
+    }
+    studente.mediavoti= mediavoti / studente.voti.length;
+    //stampa
+    let risultato = "";
+    for (chiave in studente) {
+        if (chiave != "voti") {
+            risultato += chiave + ": " + studente[chiave] + "<br/>";
+        }
+    }
+    document.getElementById("es3-risultato"). innerHTML= risultato;
+}
